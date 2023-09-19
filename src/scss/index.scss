@@ -1,0 +1,58 @@
+// ! удалить
+.тестовая-рамка {
+    border: 2px solid #ff0000;
+}
+.тестовая-рамка-2 {
+    border: 2px solid #fffb00;
+}
+
+@import "./body_light";
+@import "./body_dark";
+
+:root {
+    --darc-bg-color: #020216;
+    --light-bg-color: #f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    position: relative;
+}
+
+.btn-site-style {
+    background-color: initial;
+    border: none;
+}
+.btn-site-style__icon {
+    height: 50px;
+    width: 50px;
+    border: none;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.main {
+    padding: 0px 2vw;
+}
+
+.main__content {
+    height: 100vh;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2vw;
+}

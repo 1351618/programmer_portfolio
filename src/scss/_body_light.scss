@@ -1,0 +1,44 @@
+.body--light {
+    background-color: var(--light-bg-color);
+
+    .left-header {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    .profile-card-darc {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    .about {
+        margin: 72px 0vw 0px;
+    }
+
+    .about__content_stub {
+        width: 750px;
+        height: 42vw;
+    }
+}
+
+.top-header {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: var(--light-bg-color);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 100;
+}
+
+.profile-card-light {
+    position: absolute;
+    height: auto;
+    width: 30vw;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
