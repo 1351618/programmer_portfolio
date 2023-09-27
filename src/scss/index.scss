@@ -1,61 +1,99 @@
-// ! удалить
+// ! удалить ++++++++++++++++++++++
 .тестовая-рамка {
-    border: 2px solid #ff0000;
+  border: 2px solid #ff0000;
 }
 .тестовая-рамка {
-    border: 2px solid #ff0000;
+  border: 2px solid #ff0000;
 }
 .тестовая-рамка-2 {
-    border: 2px solid #fffb00;
+  border: 2px solid #fffb00;
 }
-
+// ! удалить ++++++++++++++++++++++^
 @import "./body_light";
 @import "./body_dark";
+@import "./fonts_connect";
+@import "./reset_styles";
 
 :root {
-    --darc-bg-color: #020216;
-    --light-bg-color: #f1f1f1;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  --darc-bg-color: #020216;
+  --darc-text-M-colof: #fcffda;
+  --darc-text-G-colof: #00b15e;
+  --light-bg-color: #f1f1f1;
+  --light-text-BG-colof: #003b1f;
+  --light-text-B-colof: #010225;
 }
 
 .body {
-    position: relative;
+  position: relative;
 }
 
 .btn-site-style {
-    background-color: initial;
-    border: none;
+  background-color: initial;
+  border: none;
 }
 .btn-site-style__icon {
-    height: 50px;
-    width: 50px;
-    border: none;
+  height: 50px;
+  width: 50px;
+  border: none;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .main {
-    padding: 0px 2vw;
+  padding: 0px 2vw;
 }
 
-.main__content {
-    height: 100vh;
-}
+// .main__content {
+//   height: 100vh;
+// }
 
 .about__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2vw;
+  display: flex;
+  gap: 2vw;
+}
+
+.about__content_text {
+  width: 100%;
+}
+
+.dark-menu__ul-min,
+.light-menu__ul-min {
+  position: relative;
+  ul {
+    position: absolute;
+    width: 100px;
+  }
+}
+
+.ul-min {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+
+  i {
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+  }
+}
+
+.light-menu__ul-min:hover ul,
+.light-menu__ul-min:focus ul,
+.dark-menu__ul-min:hover ul,
+.dark-menu__ul-min:focus ul {
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
 }

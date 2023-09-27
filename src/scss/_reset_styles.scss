@@ -1,0 +1,15 @@
+//todo   _reset_styles.scss   обнуление стилей по умолчанию
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #808080;
+  // color: inherit;
+  list-style: none;
+}

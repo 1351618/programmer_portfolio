@@ -1,0 +1,10 @@
+// todo  _fonts_connect.scss
+
+@font-face {
+  font-family: "bauhaus";
+  src: url("../fonts/bauhaus.woff2") format("woff2"),
+    url("../fonts/bauhaus.woff") format("woff");
+  /* Дополнительные форматы шрифтов, если есть */
+  font-weight: normal;
+  font-style: normal;
+}

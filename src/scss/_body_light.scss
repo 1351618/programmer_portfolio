@@ -1,44 +1,121 @@
 .body--light {
-    background-color: var(--light-bg-color);
+  background-color: var(--light-bg-color);
 
-    .left-header {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
+  .left-header {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 
-    .profile-card-darc {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    .about {
-        margin: 72px 0vw 0px;
-    }
+  .profile-card-darc {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .about {
+    margin: 72px 0vw 0px;
+  }
 
-    .about__content_stub {
-        width: 750px;
-        height: 42vw;
-    }
+  .about__content_stub {
+    width: 60%;
+    height: 42vw;
+  }
+
+  .light-menu__ul-min {
+    display: none;
+  }
 }
 
 .top-header {
-    position: fixed;
-    height: 70px;
-    width: 100%;
-    background-color: var(--light-bg-color);
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    z-index: 100;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: var(--light-bg-color);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-header__ul-min {
+  display: none;
+}
+.top-header__ul-min_list {
+  display: none;
+}
+
+.top-header__load {
+  svg {
+    width: 30px;
+    margin-right: 10px;
+  }
 }
 
 .profile-card-light {
-    position: absolute;
-    height: auto;
-    width: 30vw;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 10px;
+  position: absolute;
+  height: auto;
+  width: 30vw;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .body--light {
+    .profile-card-darc {
+      display: none;
+    }
+
+    .light-menu__ul-min {
+      ul {
+        display: none;
+      }
+    }
+    .light-menu__ul-max {
+      display: none;
+    }
+
+    .light-menu__ul-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .light {
+        background-color: var(--light-bg-color);
+        i {
+          background-color: var(--light-text-BG-colof);
+        }
+      }
+    }
+
+    .light-menu__ul-min:hover ul,
+    .light-menu__ul-min:focus ul {
+      background-color: var(--light-bg-color);
+      border: 2px solid var(--light-text-B-colof);
+      li a {
+        color: var(--light-text-B-colof);
+      }
+    }
+    .about {
+      margin: 70px 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .profile-card-light {
+      position: relative;
+      width: 40vw;
+      min-width: 300px;
+    }
+
+    .about__content_stub {
+      height: 0;
+      width: 0;
+    }
+  }
 }

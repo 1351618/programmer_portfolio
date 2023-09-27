@@ -1,51 +1,182 @@
 .body--dark {
-    background-color: var(--darc-bg-color);
-    color: aliceblue;
+  background-color: var(--darc-bg-color);
+  color: aliceblue;
 
-    .top-header {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    .main {
-        padding: 0px 2vw 0px 64px;
-    }
+  .top-header {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .main {
+    padding: 0px 2vw 0px 64px;
+  }
 
-    .profile-card-light {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
+  .profile-card-light {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 
-    .about__content_stub {
-        height: 100vh;
-        width: 116%;
+  .about__content_stub {
+    height: 100vh;
+    width: 60%;
+  }
+  //todo общие настройки текста к темной теме ——————↴
+  .main-title {
+    font-family: "bauhaus";
+    color: var(--darc-text-M-colof);
+    margin: 10vh 5vw;
+  }
+  .main-selected {
+    color: var(--darc-text-G-colof);
+    span {
+      color: #25332c;
     }
+  }
+  .main-text {
+    color: var(--darc-text-M-colof);
+    margin: 2vh;
+  }
+  // todo —————————————————————————————————————————————↵
+  .about__content_text--main-selected {
+    display: none;
+  }
+  .about__content_text--main-selected {
+    display: none;
+  }
 }
 
 .left-header {
-    position: fixed;
-    height: 100vh;
-    width: 60px;
-    background-color: var(--darc-bg-color);
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 60px;
+  background-color: var(--darc-bg-color);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-header__load {
+  background-color: transparent;
+  svg {
+    width: 30px;
+    margin-bottom: 15px;
+    fill: var(--darc-text-G-colof);
+  }
+}
+
+.dark-menu__ul-max {
+  svg {
+    height: 30px;
+    fill: var(--darc-text-G-colof);
+    margin-top: 2vh;
+  }
+}
+.dark-menu__ul-min {
+  display: none;
 }
 
 .profile-card-darc {
-    position: absolute;
-    height: 100vh;
-    width: 30vw;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  width: 30vw;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-    img {
-        object-fit: contain;
-        height: 100%;
-        min-height: 500px;
+  img {
+    object-fit: contain;
+    height: 100%;
+    min-height: 500px;
+  }
+  div {
+    position: absolute;
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .body--dark {
+    .left-header {
+      position: absolute;
+      height: 60px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
     }
+    .dark-menu__ul-min {
+      ul {
+        display: none;
+      }
+    }
+    .dark-menu__ul-max {
+      display: none;
+    }
+
+    .dark-menu__ul-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dark {
+        background-color: var(--darc-text-G-colof);
+        i {
+          background-color: var(--darc-text-M-colof);
+        }
+      }
+    }
+
+    .dark-menu__ul-min:hover ul,
+    .dark-menu__ul-min:focus ul {
+      background-color: var(--darc-bg-color);
+      border: 2px solid var(--darc-text-G-colof);
+      li a {
+        color: var(--darc-text-G-colof);
+      }
+    }
+
+    .left-header__load {
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    .main {
+      padding: 60px 1vw;
+    }
+
+    .profile-card-darc {
+      position: relative;
+      height: 47vh;
+      width: initial;
+      div {
+        position: absolute;
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    .profile-card-darc img {
+      height: 100%;
+      margin-top: 20%;
+    }
+    .about__content_stub {
+      height: 0;
+      width: 0;
+    }
+    .about__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about__content_text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
