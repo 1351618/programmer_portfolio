@@ -65,6 +65,7 @@
 .skill-icons {
   iframe {
     width: 100%;
+    height: 120px;
   }
 }
 
@@ -102,4 +103,44 @@
   border-radius: 5px;
   flex-direction: column;
   align-items: center;
+}
+
+.my-works {
+  width: 100%;
+}
+.main-examples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.my-works .main-selected {
+  margin: 5px 5vw;
+}
+
+.site {
+  position: relative;
+  iframe {
+    width: 280px;
+    height: 380px;
+  }
+}
+
+.examples-wind {
+  a {
+    // background-color: var(--darc-text-G-colof);
+    position: absolute;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid var(--darc-text-G-colof);
+    img {
+      height: 30px;
+    }
+  }
 }

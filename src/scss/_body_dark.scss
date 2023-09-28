@@ -23,6 +23,10 @@
   .main-title {
     font-family: "bauhaus";
     color: var(--darc-text-M-colof);
+  }
+  .about__content_text .main-title {
+    font-family: "bauhaus";
+    color: var(--darc-text-M-colof);
     margin: 10vh 5vw;
   }
   .main-selected {
@@ -41,6 +45,21 @@
   }
   .about__content_text--main-selected {
     display: none;
+  }
+
+  .my-works .main-title {
+    margin: 2vh 10vw;
+  }
+  iframe {
+    border: 2px solid var(--darc-text-G-colof);
+    border-radius: 8px;
+  }
+
+  .examples-wind {
+    a {
+      background-color: var(--darc-text-G-colof);
+      border: 2px solid var(--darc-text-G-colof);
+    }
   }
 }
 
