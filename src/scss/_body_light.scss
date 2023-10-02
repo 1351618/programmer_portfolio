@@ -1,6 +1,34 @@
 .body--light {
   background-color: var(--light-bg-color);
 
+  iframe {
+    border: 2px solid var(--light-bg-2-color);
+    border-radius: 10px;
+  }
+
+  //todo общие настройки текста к светлой теме ——————↴
+  .main-title {
+    font-family: "bauhaus";
+    color: var(--light-text-BG-colof);
+  }
+  .about__content_text .main-title {
+    font-family: "bauhaus";
+    color: var(--light-text-BG-colof);
+    margin: 4vh 5vw;
+    font-size: 50px;
+  }
+  .main-selected {
+    color: var(--light-text-B-colof);
+    span {
+      color: #25332c;
+    }
+  }
+  .main-text {
+    color: var(--light-text-B-colof);
+    margin: 2vh;
+  }
+  // todo —————————————————————————————————————————————↵
+
   .left-header {
     opacity: 0;
     transform: translateX(-100%);
@@ -28,13 +56,36 @@
       border: 2px solid var(--light-bg-color);
     }
   }
+
+  .key-skills {
+    ul:nth-of-type(1) {
+      li {
+        border: 2px solid var(--light-bg-2-color);
+        color: var(--light-text-BG-colof);
+      }
+    }
+    ul:nth-of-type(2) {
+      li {
+        color: var(--light-text-B-colof);
+      }
+    }
+  }
+
+  .footer {
+    background-color: var(--light-bg-2-color);
+    padding: 2vw;
+    div {
+      padding-top: 10px;
+    }
+  }
 }
 
 .top-header {
   position: fixed;
+  top: 0;
   height: 70px;
   width: 100%;
-  background-color: var(--light-bg-color);
+  background-color: var(--light-bg-2-color);
   opacity: 1;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   z-index: 100;
@@ -51,6 +102,7 @@
 }
 
 .top-header__load {
+  background-color: var(--light-bg-2-color);
   svg {
     width: 30px;
     margin-right: 10px;

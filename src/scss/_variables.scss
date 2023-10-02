@@ -1,0 +1,19 @@
+// для темной темы
+:root {
+  // основной цвет фона
+  --darc-bg-color: #020216;
+
+  // цвет текста
+  --darc-text-M-colof: #fcffda;
+  --darc-text-G-colof: #00c5a6;
+}
+
+// для светлой темы
+:root {
+  // основной цвет фона
+  --light-bg-color: #f1f1f1;
+  --light-bg-2-color: #f3f2d6;
+  // цвет текста
+  --light-text-BG-colof: #003b1f;
+  --light-text-B-colof: #010225;
+}
