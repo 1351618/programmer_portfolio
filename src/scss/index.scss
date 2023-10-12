@@ -115,13 +115,25 @@
 
 .site {
   position: relative;
+  // overflow: hidden;
+  // background-color: #fff;
+
   iframe {
     width: 280px;
     height: 380px;
   }
 }
 
+.miscellaneous {
+  iframe {
+    width: 280px;
+    height: 280px;
+  }
+}
+
 .examples-wind {
+  // background-color: #fff;
+  overflow: hidden;
   a {
     // background-color: var(--darc-text-G-colof);
     position: absolute;
