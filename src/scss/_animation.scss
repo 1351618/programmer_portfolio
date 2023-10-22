@@ -1,0 +1,55 @@
+@keyframes winKey {
+  0% {
+    background-color: #000000;
+    box-shadow: 0px 0px 5px #000000;
+  }
+  5% {
+    background-color: var(--darc-text-G-colof);
+    box-shadow: 0px 0px 15px var(--darc-text-G-colof),
+      0px 0px 30px var(--darc-text-G-colof),
+      0px 0px 45px var(--darc-text-G-colof),
+      inset 0px 0px 5px var(--darc-text-G-colof),
+      inset 0px 0px 10px var(--darc-text-G-colof),
+      inset 0px 0px 15px var(--darc-text-G-colof);
+  }
+  25% {
+    background-color: #000000;
+    box-shadow: 0px 0px 5px #000000;
+    // transform: translate(-50%, -5px);
+  }
+  30% {
+    background-color: var(--darc-text-G-colof);
+    box-shadow: 0px 0px 15px var(--darc-text-G-colof),
+      0px 0px 30px var(--darc-text-G-colof),
+      0px 0px 45px var(--darc-text-G-colof),
+      inset 0px 0px 5px var(--darc-text-G-colof),
+      inset 0px 0px 10px var(--darc-text-G-colof),
+      inset 0px 0px 15px var(--darc-text-G-colof);
+  }
+  35% {
+    background-color: #000000;
+    box-shadow: 0px 0px 5px #000000;
+  }
+  40% {
+    background-color: var(--darc-text-G-colof);
+    box-shadow: 0px 0px 15px var(--darc-text-G-colof),
+      0px 0px 30px var(--darc-text-G-colof),
+      0px 0px 45px var(--darc-text-G-colof),
+      inset 0px 0px 5px var(--darc-text-G-colof),
+      inset 0px 0px 10px var(--darc-text-G-colof),
+      inset 0px 0px 15px var(--darc-text-G-colof);
+  }
+  50% {
+    background-color: #000000;
+    box-shadow: 0px 0px 5px #000000;
+  }
+  100% {
+    background-color: var(--darc-text-G-colof);
+    box-shadow: 0px 0px 15px var(--darc-text-G-colof),
+      0px 0px 30px var(--darc-text-G-colof),
+      0px 0px 45px var(--darc-text-G-colof),
+      inset 0px 0px 5px var(--darc-text-G-colof),
+      inset 0px 0px 10px var(--darc-text-G-colof),
+      inset 0px 0px 15px var(--darc-text-G-colof);
+  }
+}
