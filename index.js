@@ -8,11 +8,11 @@ const json_site = "./src/json/sites.json";
 
 const mainExamples = document.querySelector(".sites");
 
-function FetchRequest(data, funct) {
+function FetchRequest(data, funct, divBlock) {
   fetch(data)
     .then((response) => response.json())
     .then((jsonData) => {
-      funct(jsonData);
+      funct(jsonData, divBlock);
     })
     .catch((error) => {
       console.error("Ошибка загрузки файла:", error);
@@ -20,7 +20,7 @@ function FetchRequest(data, funct) {
 }
 
 // отрисовка примера сайта
-function siteRender(data) {
+function siteRender(data, divBlock) {
   //   console.log(data[0]);
   data.map((val) => {
     console.log(val.guideLink);
@@ -59,8 +59,12 @@ function siteRender(data) {
     site_Div.appendChild(gitVisit_Div);
     site_Div.appendChild(site_Iframe);
 
-    mainExamples.appendChild(site_Div);
+    divBlock.appendChild(site_Div);
   });
 }
 
-FetchRequest(json_site, siteRender);
+// запуск функции для рендеринга примеров
+//* json_site - ссылка на json
+//* siteRender - функция сборки примера
+//* mainExamples - div где отрисовывать
+FetchRequest(json_site, siteRender, mainExamples); //сайты
