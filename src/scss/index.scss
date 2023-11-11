@@ -135,9 +135,28 @@ html {
 .examples-wind {
   // background-color: #fff;
   overflow: hidden;
+  // a {
+  //   background-color: var(--darc-text-G-colof);
+  //   position: absolute;
+  //   margin: 5px;
+  //   border-radius: 50%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   transition: box-shadow 0.3s ease;
+  //   img {
+  //     height: 30px;
+  //   }
+  // }
+}
+
+.git-visit {
+  position: absolute;
+  display: flex;
+  bottom: 0;
   a {
-    // background-color: var(--darc-text-G-colof);
-    position: absolute;
+    background-color: var(--darc-text-G-colof);
+    overflow: hidden;
     margin: 5px;
     border-radius: 50%;
     display: flex;
