@@ -4,67 +4,70 @@ import "./src/js/site_style.js";
 import "./src/js/entr.js";
 import "./src/js/animation.js";
 
-const json_site = "./src/json/sites.json";
+// const json_site = "./src/json/sites.json";
 
-const mainExamples = document.querySelector(".sites");
+const sitesExamples = document.querySelector(".sites");
+const miscellaneousExamples = document.querySelector(".miscellaneous");
+const slidersExamples = document.querySelector(".sliders");
 
-function FetchRequest(data, funct, divBlock) {
-  fetch(data)
-    .then((response) => response.json())
-    .then((jsonData) => {
-      funct(jsonData, divBlock);
-    })
-    .catch((error) => {
-      console.error("Ошибка загрузки файла:", error);
-    });
-}
+const g_sites = "sites";
+const g_miscellaneous = "mini_game";
+const g_sliders = "slider";
 
-// отрисовка примера сайта
-function siteRender(data, divBlock) {
-  //   console.log(data[0]);
-  data.map((val) => {
-    console.log(val.guideLink);
-    // создание элементов
-    const site_Div = document.createElement("div"); // блок сайта
-    site_Div.classList.add("site");
-    //   site_Div.classList.add("examples-wind");
+// !=================== получаем данные с github
+const username = "1351618"; // Замените на имя пользователя, которое вам нужно
 
-    const gitVisit_Div = document.createElement("div"); // блок - кнопки
-    gitVisit_Div.classList.add("git-visit");
+const apiUrl = `https://api.github.com/users/${username}/starred`;
 
-    const siteLinkGit_A = document.createElement("a"); //ссылка на git а
-    siteLinkGit_A.href = val.guideLink;
-    siteLinkGit_A.target = "_blank";
-    const siteLinkGit_Img = document.createElement("img"); //иконка для git
-    siteLinkGit_Img.src = "./src/image/git_icon.png";
-    siteLinkGit_A.appendChild(siteLinkGit_Img);
+fetch(apiUrl)
+  .then((response) => response.json())
+  .then((starredRepos) => {
+    // Здесь starredRepos содержит информацию о звездированных репозиториях пользователя
+    // console.log(starredRepos);
+    cartBlock(starredRepos);
+  })
+  .catch((error) => console.error("Ошибка загрузки данных:", error));
 
-    const siteLinkSite_A = document.createElement("a"); //ссылка на git а
-    siteLinkSite_A.href = val.siteLink;
-    siteLinkSite_A.target = "_blank";
-    const siteLinkSite_Img = document.createElement("img"); //иконка для git
-    siteLinkSite_Img.src = "./src/image/veb-sajt_fzqdhnkflxc6_128.png";
-    siteLinkSite_A.appendChild(siteLinkSite_Img);
-
-    // siteLinkGit_A
-    // siteLinkSite_A
-    gitVisit_Div.appendChild(siteLinkGit_A);
-    gitVisit_Div.appendChild(siteLinkSite_A);
-
-    const site_Iframe = document.createElement("iframe"); //создание фрейма
-    site_Iframe.src = val.siteLink; //контент фрейма
-
-    // gitVisit_Div
-    //  site_Iframe
-    site_Div.appendChild(gitVisit_Div);
-    site_Div.appendChild(site_Iframe);
-
-    divBlock.appendChild(site_Div);
+function cartBlock(massiv) {
+  massiv.map((val) => {
+    let fullName = val.full_name;
+    if (fullName.includes(g_sites)) {
+      raktaStructure(val, sitesExamples);
+    }
+    if (fullName.includes(g_miscellaneous)) {
+      raktaStructure(val, miscellaneousExamples);
+    }
+    if (fullName.includes(g_sliders)) {
+      raktaStructure(val, slidersExamples);
+    }
   });
 }
 
-// запуск функции для рендеринга примеров
-//* json_site - ссылка на json
-//* siteRender - функция сборки примера
-//* mainExamples - div где отрисовывать
-FetchRequest(json_site, siteRender, mainExamples); //сайты
+function raktaStructure(objData, divBlock) {
+  // console.log(objData.homepage);
+  let blockArchitecture = `
+    <div class="site">
+      <div class="git-visit">
+        <a href="${objData.html_url}" target="_blank">
+          <img src="./src/image/git_icon.png">
+        </a>
+        <a href="${objData.homepage}" target="_blank">
+          <img src="./src/image/veb-sajt_fzqdhnkflxc6_128.png">
+        </a>
+      </div>
+      <iframe src="${objData.homepage}"></iframe>
+    </div>
+  `;
+  divBlock.insertAdjacentHTML("beforeend", blockArchitecture);
+}
+// !========================================
+
+// const fileUrl =
+//   "https://hh.ru/resume_converter/%D0%9A%D0%BE%D0%B6%D0%B5%D0%BC%D1%8F%D0%BA%D0%B8%D0%BD%20%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9.txt?hash=763172b4ff0c81b6f60039ed1f545479576846&type=txt&hhtmSource=resume&hhtmFrom=resume_list";
+
+// fetch(fileUrl)
+//   .then((response) => response.json())
+//   .then((starredRepos) => {
+//     console.log(starredRepos);
+//   })
+//   .catch((error) => console.error("Ошибка загрузки данных:", error));

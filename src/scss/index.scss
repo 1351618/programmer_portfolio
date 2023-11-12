@@ -114,6 +114,15 @@ html {
   margin: 5px 5vw;
 }
 
+.sliders {
+  div {
+    iframe {
+      width: 280px;
+      height: 200px;
+    }
+  }
+}
+
 .site {
   position: relative;
 
