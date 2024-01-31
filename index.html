@@ -21,6 +21,12 @@
         />
       </button>
 
+      <select class="languageSelect" id="languageSelect">
+        <option value="ru">Ру</option>
+        <option value="en">En</option>
+        <option value="cy">Cy</option>
+      </select>
+
       <ul class="light-menu__ul-max">
         <li><a href="#">Обо мне</a></li>
       </ul>
@@ -86,6 +92,11 @@
           alt="site-style"
         />
       </button>
+      <select class="languageSelect" id="languageSelect">
+        <option value="ru">Ру</option>
+        <option value="en">En</option>
+        <option value="cy">Cy</option>
+      </select>
       <ul class="dark-menu__ul-max">
         <!-- пункты левого меню -->
         <li>
@@ -256,30 +267,7 @@
         </section>
         <div class="about__content">
           <div class="about__content_stub"></div>
-          <div class="about__content_text">
-            <h1 class="main-title">Обо мне:</h1>
-            <h2 class="main-selected about__content_text--main-selected">
-              Кожемякин Сергей
-            </h2>
-
-            <h2 class="main-selected">
-              39 лет <span>/</span> Россия <span>/</span> freelance
-            </h2>
-            <h2 class="main-selected about__content_text--main-selected">
-              Frontend Developer
-            </h2>
-            <p class="main-text">
-              <strong>Специализации:</strong> <br />
-              Программист, разработчик <br />
-              <strong>Занятость:</strong> <br />
-              полная занятость, частичная занятость, проектная работа,
-              стажировка <br />
-              <strong> График работы:</strong> <br />
-              полный день, удаленная работа
-            </p>
-
-            <p>Краткое описание о себе...</p>
-          </div>
+          <div class="about__content_text"></div>
         </div>
       </div>
 
@@ -296,7 +284,7 @@
       <!--todo  окно с Ключевые навыки  -->
 
       <div class="main__content key-skills" id="key-skills">
-        <h1 class="main-title">Ключевые навыки</h1>
+        <!-- <h1 class="main-title">Ключевые навыки</h1>
         <ul>
           <li>JavaScript</li>
           <li>HTML</li>
@@ -316,9 +304,9 @@
           <li>Frontend</li>
           <li>Sass</li>
           <li>WebPack</li>
-        </ul>
+        </ul> -->
         <!--todo  окно с Личные качества  -->
-        <h2 class="main-selected">Личные качества:</h2>
+        <!-- <h2 class="main-selected">Личные качества:</h2>
         <ul>
           <li>
             - Ответственность и исполнительность в выполнении поставленных
@@ -331,7 +319,7 @@
           <li>
             - Креативность и способность находить нестандартные решения задач.
           </li>
-        </ul>
+        </ul> -->
       </div>
 
       <!-- линия  -->
@@ -353,6 +341,17 @@
         <!-- секция сайтов -->
         <h2 class="main-selected">сайты</h2>
         <div class="sites main-examples">
+          <!-- <div class="site">
+            <div class="git-visit">
+              <a href="${objData.html_url}" target="_blank">
+                <img src="./src/image/git_icon.png" />
+              </a>
+              <a href="https://guider.pro/" target="_blank">
+                <img src="./src/image/veb-sajt_fzqdhnkflxc6_128.png" />
+              </a>
+            </div>
+            <iframe src="https://guider.pro/"></iframe>
+          </div> -->
           <!-- * -------------------------------------------------- -->
           <!-- рендеринг блоков из sites.json -->
           <!-- * -------------------------------------------------- -->

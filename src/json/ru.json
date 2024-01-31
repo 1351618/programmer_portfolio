@@ -1,0 +1,32 @@
+[
+  {
+    "about": {
+      "title": "обомне",
+      "aboutText": "Меня всегда интересовало программирование, и у меня всегда было желание заниматься этой областью. Теперь я полностью осознаю, что программирование — это мое истинное призвание, и сосредоточен на развитии своих навыков и профессиональном росте. Я работал в других областях в прошлом, но программирование всегда было моим хобби и источником удовольствия. У меня уже есть опыт работы в европейской ИТ-компании и фриланс-проектах, несмотря на то, что я новичок в области фронтенд-разработки. Сейчас я живу на Кипре",
+      "en": "I have always been interested in programming and have always had a desire to pursue this field. I am now fully aware that programming is my true calling and I am focused on developing my skills and growing professionally. I have worked in other fields in the past, but programming has always been my hobby and source of pleasure. I already have experience working in a European IT company and freelancing projects, despite being new to front-end development. I currently live in Cyprus."
+    },
+    "keySkills": {
+      "title": "ключевые навыки",
+      "tegSkills": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "CSS3",
+        "Node.js",
+        "Git",
+        "Адаптивная верстка",
+        "HTML5",
+        "Python",
+        "Пользователь ПК",
+        "MS Office",
+        "Fusion-360",
+        "Adobe Photoshop",
+        "БЭМ",
+        "React",
+        "Frontend",
+        "Sass",
+        "WebPack"
+      ]
+    }
+  }
+]

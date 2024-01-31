@@ -3,6 +3,8 @@
 import "./src/js/site_style.js";
 import "./src/js/entr.js";
 import "./src/js/animation.js";
+import "./src/js/about.js";
+import "./src/js/key_skills.js";
 
 // const json_site = "./src/json/sites.json";
 
@@ -60,14 +62,3 @@ function raktaStructure(objData, divBlock) {
   `;
   divBlock.insertAdjacentHTML("beforeend", blockArchitecture);
 }
-// !========================================
-
-// const fileUrl =
-//   "https://hh.ru/resume_converter/%D0%9A%D0%BE%D0%B6%D0%B5%D0%BC%D1%8F%D0%BA%D0%B8%D0%BD%20%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9.txt?hash=763172b4ff0c81b6f60039ed1f545479576846&type=txt&hhtmSource=resume&hhtmFrom=resume_list";
-
-// fetch(fileUrl)
-//   .then((response) => response.json())
-//   .then((starredRepos) => {
-//     console.log(starredRepos);
-//   })
-//   .catch((error) => console.error("Ошибка загрузки данных:", error));
